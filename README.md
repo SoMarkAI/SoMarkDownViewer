@@ -1,5 +1,7 @@
 # SoMarkDown Viewer
 
+[![GitHub](https://img.shields.io/github/license/SoMarkAI/SoMarkDownViewer)](https://github.com/SoMarkAI/SoMarkDownViewer/blob/main/LICENSE)
+
 SoMarkDown Viewer is a web application of [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown), designed for previewing and rendering SoMarkDown documents.
 
 SoMarkDown is a Markdown superset built upon [markdown-it](https://github.com/markdown-it/markdown-it), providing enhanced support for professional rendering capabilities including mathematical formulas, chemical structures (SMILES), code syntax highlighting, and more. SoMarkDown also serves as the target protocol for parsing results in the [SoMark](https://somark.ai/) document intelligence parsing product.

@@ -1,5 +1,7 @@
 # SoMarkDown Viewer
 
+[![GitHub](https://img.shields.io/github/license/SoMarkAI/SoMarkDownViewer)](https://github.com/SoMarkAI/SoMarkDownViewer/blob/main/LICENSE)
+
 SoMarkDown Viewer 是 [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown) 的一个 Web 应用，用于预览和渲染 SoMarkDown 文档。
 
 SoMarkDown 是 Markdown 的超集，基于[markdown-it](https://github.com/markdown-it/markdown-it)开发，添加了对专业渲染方案的支持，如数学公式、化学结构式（SMILES）、代码语法高亮等。SoMarkDown 也是 [SoMark](https://somark.ai/) 文档智能解析产品的解析结果目标协议。
