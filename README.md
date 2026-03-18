@@ -4,6 +4,8 @@
 
 SoMarkDown Viewer is a web application of [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown), designed for previewing and rendering SoMarkDown documents.
 
+![](docs/assets/screenshot.shadow.png)
+
 SoMarkDown is a Markdown superset built upon [markdown-it](https://github.com/markdown-it/markdown-it), providing enhanced support for professional rendering capabilities including mathematical formulas, chemical structures (SMILES), code syntax highlighting, and more. SoMarkDown also serves as the target protocol for parsing results in the [SoMark](https://somark.ai/) document intelligence parsing product.
 
 This Viewer project is not only a SoMarkDown preview tool, but also provides interactive professional rendering features, including:
