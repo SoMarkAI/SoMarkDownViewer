@@ -1,8 +1,12 @@
 # SoMarkDown Viewer
 
+[English](./README.md) ｜ 中文
+
 [![GitHub](https://img.shields.io/github/license/SoMarkAI/SoMarkDownViewer)](https://github.com/SoMarkAI/SoMarkDownViewer/blob/main/LICENSE)
 
 SoMarkDown Viewer 是 [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown) 的一个 Web 应用，用于预览和渲染 SoMarkDown 文档。
+
+在线体验：https://somark.tech/smd
 
 ![](docs/assets/screenshot.shadow.png)
 
@@ -12,6 +16,8 @@ SoMarkDown 是 Markdown 的超集，基于[markdown-it](https://github.com/markd
 1. 实时编辑渲染 SoMarkDown 文档。
 2. 逻辑对齐的双向同步滚动。
 3. 双向点击对应位置跳转。
+
+我们还提供了 Gradio 插件 [gradio-somarkdown](https://github.com/SoMarkAI/gradio_somarkdown)，可以替代 Gradio 中的 Markdown 组件。
 
 ## 安装
 

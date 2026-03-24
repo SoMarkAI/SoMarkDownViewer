@@ -1,8 +1,12 @@
 # SoMarkDown Viewer
 
+English ｜ [中文](./README_CN.md)
+
 [![GitHub](https://img.shields.io/github/license/SoMarkAI/SoMarkDownViewer)](https://github.com/SoMarkAI/SoMarkDownViewer/blob/main/LICENSE)
 
 SoMarkDown Viewer is a web application of [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown), designed for previewing and rendering SoMarkDown documents.
+
+Quick Try: https://somark.tech/smd
 
 ![](docs/assets/screenshot.shadow.png)
 
@@ -12,6 +16,8 @@ This Viewer project is not only a SoMarkDown preview tool, but also provides int
 1. Real-time editing and rendering of SoMarkDown documents.
 2. Bi-directional synchronized scrolling with logical alignment.
 3. Bi-directional click-to-jump position mapping.
+
+We also provide the Gradio plugin [gradio-somarkdown](https://github.com/SoMarkAI/gradio_somarkdown), which can replace the Markdown component in Gradio.
 
 ## Installation
 
