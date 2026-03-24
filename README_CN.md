@@ -59,3 +59,5 @@ Viewer 提供了多种方式载入 SoMarkDown 文件：
 
 MIT
 
+## SoMarkDown 微信交流群
+<img src="./docs/assets/wechat.png" width="100">

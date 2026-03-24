@@ -58,3 +58,6 @@ The Viewer supports multiple methods to load SoMarkDown files:
 ## License
 
 MIT
+
+## SoMarkDown WeChat Group
+<img src="./docs/assets/wechat.png" width="100">
