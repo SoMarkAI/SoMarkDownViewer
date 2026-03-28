@@ -74,6 +74,65 @@ body {
     font-size: 1.125rem;
     letter-spacing: -0.025em;
     user-select: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header__logo-svg {
+    width: 0;
+    height: 24px;
+    margin-right: 0;
+    opacity: 0;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                margin-right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity 0.4s ease;
+}
+
+.logo-text:hover .header__logo-svg {
+    width: 28px;
+    margin-right: 6px;
+    opacity: 1;
+}
+
+.header__logo-rect {
+    transform-origin: center;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                opacity 0.4s ease;
+}
+
+.header__logo-rect--top {
+    transition-delay: 0s;
+}
+
+.header__logo-rect--middle {
+    transition-delay: 0.1s;
+}
+
+.header__logo-rect--bottom-left,
+.header__logo-rect--bottom-right {
+    transition-delay: 0.2s;
+}
+
+.logo-text:hover .header__logo-rect {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.logo-text:hover .header__logo-rect--top {
+    transition-delay: 0.2s;
+}
+
+.logo-text:hover .header__logo-rect--middle {
+    transition-delay: 0.1s;
+}
+
+.logo-text:hover .header__logo-rect--bottom-left,
+.logo-text:hover .header__logo-rect--bottom-right {
+    transition-delay: 0s;
 }
 
 .file-path {
@@ -452,3 +511,17 @@ body {
         border-bottom: 1px solid var(--border-color);
     }
 }
+
+/* 修复 Markdown 渲染器中徽章（Badges）和状态图标被强制拉伸的问题 */
+.somarkdown-container img[src*="shields.io"],
+.somarkdown-container img[src*="badge"],
+.somarkdown-container img[src*="badgen.net"],
+.somarkdown-container img[src*="travis-ci.org"],
+.somarkdown-container img[src*="coveralls.io"] {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: inline-block !important;
+    box-shadow: none !important; /* 移除徽章可能带有的阴影 */
+}
+
