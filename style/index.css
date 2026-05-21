@@ -264,6 +264,11 @@ body {
     transition: transform 0ms linear;
 }
 
+.line-numbers-inner > div {
+    line-height: var(--source-line-height, 1.6em);
+    min-height: var(--source-line-height, 1.6em);
+}
+
 .editor-textarea {
     flex: 1;
     padding: 1rem;
@@ -279,6 +284,22 @@ body {
     font-size: 14px;
     line-height: 1.6;
     box-sizing: border-box;
+}
+
+.source-line-measure {
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+    box-sizing: content-box;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .editor-textarea::selection {
@@ -524,4 +545,3 @@ body {
     display: inline-block !important;
     box-shadow: none !important; /* 移除徽章可能带有的阴影 */
 }
-
