@@ -47,7 +47,8 @@ body {
     transition: filter var(--transition-normal);
 }
 
-.app-container.settings-open .app-main {
+.app-container.settings-open .app-main,
+.app-container.history-open .app-main {
     filter: blur(4px);
 }
 
@@ -143,6 +144,42 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+}
+
+.save-status {
+    width: 1rem;
+    height: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.save-status__icon {
+    width: 0.9rem;
+    height: 0.9rem;
+}
+
+.save-status--saved {
+    color: #22c55e;
+}
+
+.save-status--pending {
+    color: var(--accent-color);
+}
+
+.save-status--failed {
+    color: #ef4444;
+}
+
+.save-status__icon--pending {
+    animation: save-status-spin 850ms linear infinite;
+}
+
+@keyframes save-status-spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (min-width: 640px) {
@@ -428,7 +465,8 @@ body {
     z-index: 39;
 }
 
-.app-container.settings-open .setting-backdrop {
+.app-container.settings-open #setting-backdrop,
+.app-container.history-open #history-backdrop {
     opacity: 1;
     pointer-events: auto;
 }
@@ -488,6 +526,7 @@ body {
 
 .setting-panel-content {
     padding: 1rem;
+    overflow-x: hidden;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -545,7 +584,8 @@ body {
     gap: 0.9rem;
 }
 
-#language-select {
+#language-select,
+#autosave-interval-input {
     border: 1px solid var(--input-border);
     border-radius: 0.5rem;
     padding: 0.4rem 0.6rem;
@@ -554,17 +594,116 @@ body {
     transition: border-color var(--transition-normal), background-color var(--transition-normal);
 }
 
-#language-select:hover {
+#language-select:hover,
+#autosave-interval-input:hover {
     border-color: var(--input-hover-border);
     background-color: var(--input-bg-active);
 }
 
 #language-select:focus-visible,
 #toc-level-slider:focus-visible,
+#autosave-interval-input:focus-visible,
 .setting-item input[type="checkbox"]:focus-visible {
     outline: none;
     box-shadow: 0 0 0 2px rgba(239, 135, 27, 0.26);
     border-radius: 0.4rem;
+}
+
+.setting-item-number {
+    gap: 0.9rem;
+}
+
+#autosave-interval-input {
+    width: 5rem;
+    box-sizing: border-box;
+}
+
+.history-panel {
+    width: min(24rem, 92vw);
+}
+
+.history-list {
+    min-height: 0;
+    flex: 1;
+}
+
+.history-item {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.65rem;
+    padding: 0.8rem 0.85rem;
+    background: rgba(255, 255, 255, 0.01);
+    color: var(--text-color);
+    cursor: pointer;
+    text-align: left;
+    transition: border-color var(--transition-normal), background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.history-item:hover {
+    border-color: var(--input-hover-border);
+    background-color: rgba(239, 135, 27, 0.07);
+    transform: translateX(-2px);
+}
+
+.history-item-text {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    overflow: hidden;
+}
+
+.history-item-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.92rem;
+}
+
+.history-item-time {
+    color: var(--text-muted-half);
+    font-size: 0.75rem;
+}
+
+.history-delete-btn {
+    width: 2rem;
+    height: 2rem;
+    border: 0;
+    border-radius: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--text-muted);
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.history-delete-btn:hover {
+    background-color: rgba(239, 68, 68, 0.12);
+    color: #ef4444;
+}
+
+.history-delete-btn svg {
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+}
+
+.history-empty {
+    min-height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted-half);
+    font-size: 0.9rem;
 }
 
 .setting-panel-footer {
