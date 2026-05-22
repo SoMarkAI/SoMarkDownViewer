@@ -39,7 +39,7 @@
                 </div>
             </header>
             <input id="local-file-input" type="file" accept=".md,.smd,.txt,text/markdown,text/plain" hidden>
-            <div class="markdown-content">
+            <div class="markdown-content" id="markdown-content">
                 <section class="markdown-source">
                     <div class="markdown-source-title">
                         <span class="panel-title" data-i18n="panel.source">Source</span>
@@ -56,6 +56,17 @@
                         </div>
                     </div>
                 </section>
+                <div
+                    class="markdown-splitter"
+                    id="markdown-splitter"
+                    role="separator"
+                    aria-label="Resize source and preview panels"
+                    aria-orientation="vertical"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="50"
+                    tabindex="0"
+                ></div>
                 <section class="markdown-preview">
                     <div class="markdown-preview-title">
                         <span class="panel-title" data-i18n="panel.preview">Preview</span>
