@@ -6,7 +6,7 @@ English ｜ [中文](./README_CN.md)
 
 SoMarkDown Viewer is a web application of [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown), designed for previewing and rendering SoMarkDown documents.
 
-Quick Try: https://somark.tech/smd
+Quick Try: https://somark.ai/smd
 
 ![](docs/assets/screenshot.shadow.png)
 

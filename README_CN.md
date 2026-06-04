@@ -6,7 +6,7 @@
 
 SoMarkDown Viewer 是 [SoMarkDown](https://github.com/SoMarkAI/SoMarkDown) 的一个 Web 应用，用于预览和渲染 SoMarkDown 文档。
 
-在线体验：https://somark.tech/smd
+在线体验：https://somark.ai/smd
 
 ![](docs/assets/screenshot.shadow.png)
 
